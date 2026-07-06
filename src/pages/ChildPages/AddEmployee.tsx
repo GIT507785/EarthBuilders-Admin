@@ -56,7 +56,7 @@ const AddEmployee = () => {
         <form onSubmit={submitHandler} className="h-screen px-10 py-5 overflow-y-auto no-scrollbar border border-gray-300 rounded w-fulll">
             <h1 className="font-bold text-xl">User Details</h1>
             <h1 className="text-gray-500 font-medium mt-5">Personal Details</h1>
-          <div className="flex gap-5">
+          <div className="flex gap-5 sm:flex-row flex-col">
               <div>
                 <h1 className="mt-5 text-gray-600 font-medium">First Name</h1>
                 <input type="text" value={input?.firstName || ''}  placeholder="Enter First Name"

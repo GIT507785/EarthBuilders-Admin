@@ -92,7 +92,7 @@ const UserDetails = () => {
             <ArrowLeft size={17}/> Back</Link> 
             <div className="rounded-md border mt-5 border-gray-300 p-4 w-full h-screen overflow-y-auto no-scrollbar">
              <div className="mt-6 flex justify-between">
-                <h1 className="text-xl font-medium text-slate-700 ">User Details</h1>
+                <h1 className="text-xl font-medium text-slate-700 ">User  Details</h1>
                 <button onClick={handlesave} className="flex items-center justify-center px-4 py-1.5 rounded-full bg-emerald-700 text-white w-30 gap-2 cursor-pointer hover:bg-emerald-600 transition-all">
                     {isEdit ?(
                         <div>
