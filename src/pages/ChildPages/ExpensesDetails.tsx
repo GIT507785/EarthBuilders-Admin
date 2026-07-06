@@ -1,9 +1,7 @@
 import { ArrowLeft } from "lucide-react";
-import { LiaEllipsisVSolid } from "react-icons/lia";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const ExpensesDetails = () => {
-
   const quotesData = [
     {
       serial: 1,
@@ -11,138 +9,118 @@ const ExpensesDetails = () => {
       site: "Selveston Road, Chicago",
       paymentmethod: "Credit Card",
       paidby: "Self",
-      status: status,
       expenses: "$560.00",
     },
     {
-      serial: 1,
-      category: "Tool Purchase",
-      site: "Selveston Road, Chicago",
-      paymentmethod: "Credit Card",
-      paidby: "Self",
-      status: status,
-      expenses: "$560.00",
-    },{
-      serial: 1,
-      category: "Tool Purchase",
-      site: "Selveston Road, Chicago",
-      paymentmethod: "Credit Card",
-      paidby: "Self",
-      status: status,
-      expenses: "$560.00",
-    },{
-      serial: 1,
-      category: "Tool Purchase",
-      site: "Selveston Road, Chicago",
-      paymentmethod: "Credit Card",
-      paidby: "Self",
-      status: status,
-      expenses: "$560.00",
+      serial: 2,
+      category: "Material Purchase",
+      site: "Chicago Downtown",
+      paymentmethod: "Cash",
+      paidby: "Haseeb",
+      expenses: "$720.00",
     },
     {
-      serial: 1,
-      category: "Tool Purchase",
-      site: "Selveston Road, Chicago",
-      paymentmethod: "Credit Card",
-      paidby: "Self",
-      status: status,
-      expenses: "$560.00",
+      serial: 3,
+      category: "Fuel",
+      site: "Lahore Site",
+      paymentmethod: "Bank Transfer",
+      paidby: "Ali",
+      expenses: "$240.00",
     },
-
+    {
+      serial: 4,
+      category: "Equipment",
+      site: "Samundri",
+      paymentmethod: "Credit Card",
+      paidby: "Hamza",
+      expenses: "$900.00",
+    },
+    {
+      serial: 5,
+      category: "Labor",
+      site: "Canal Road",
+      paymentmethod: "Cash",
+      paidby: "Self",
+      expenses: "$430.00",
+    },
   ];
 
   return (
-  <div className="mt-6 space-y-4">
-   
-     <Link to="/expenses" className="flex gap-3 cursor-pointer transition-all hover:bg-emerald-700 w-30 bg-emerald-900 text-white px-4 py-2 rounded-full
-      justify-center items-center">
-         <ArrowLeft/>
-         <button className="cursor-pointer">Back</button> 
-     </Link>
+    <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm min-h-[calc(100vh-120px)]">
 
-  {/* Header */}
-  <div
-    className="hidden sm:flex justify-between
-    bg-lime-100 text-emerald-700 rounded-lg px-8 py-3 font-medium"
-  >
-    <h1>Serial #</h1>
-    <h1>Category</h1>
-    <h1>Expense</h1>
-    <h1>Working Site</h1>
-    <h1>Payment</h1>
-    <h1>Paid By</h1>
-  </div>
+      {/* Back Button */}
+      <Link
+        to="/expenses"
+        className="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-5 py-2 text-white transition hover:bg-emerald-600"
+      >
+        <ArrowLeft size={18} />
+        Back
+      </Link>
 
-  {/* Rows */}
-  {quotesData.map((item) => (
-    <div
-      key={item.serial}
-      className="border border-gray-200 px-8 rounded-xl shadow-sm bg-white
-      flex justify-between
-      p-5"
-    >
-      {/* Mobile */}
-      <div className="lg:hidden space-y-3">
-
-        <div className="flex justify-between">
-          <span className="font-semibold">Serial</span>
-          <span>0{item.serial}.</span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="font-semibold">Category</span>
-          <span>{item.category}</span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="font-semibold">Expense</span>
-          <span>{item.expenses}</span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="font-semibold">Site</span>
-          <span className="text-right">{item.site}</span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="font-semibold">Payment</span>
-          <span>{item.paymentmethod}</span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="font-semibold">Paid By</span>
-          <span>{item.paidby}</span>
-        </div>
-
-      
-
-        <div className="flex justify-end">
-          <LiaEllipsisVSolid className="text-xl cursor-pointer" />
-        </div>
+      {/* Desktop Header */}
+      <div className="hidden lg:grid grid-cols-[80px_1.5fr_140px_1.8fr_1.4fr_120px] rounded-xl bg-lime-100 px-8 py-4 mt-6 font-semibold text-emerald-700">
+        <h1>Serial</h1>
+        <h1>Category</h1>
+        <h1>Expense</h1>
+        <h1>Working Site</h1>
+        <h1>Payment</h1>
+        <h1>Paid By</h1>
       </div>
 
+      {/* Data */}
+      <div className="mt-4 space-y-4">
+        {quotesData.map((item) => (
+          <div
+            key={item.serial}
+            className="rounded-xl border border-gray-200 bg-white shadow-sm px-5 sm:px-8 py-5 lg:grid lg:grid-cols-[80px_1.5fr_140px_1.8fr_1.4fr_120px] lg:items-center"
+          >
+            {/* Mobile */}
+            <div className="space-y-4 lg:hidden">
+              <div className="flex justify-between">
+                <span className="font-semibold">Serial</span>
+                <span>{item.serial}</span>
+              </div>
 
-      {/* Desktop */}
-      <div className="hidden lg:contents">
-        <span>0{item.serial}.</span>
+              <div className="flex justify-between">
+                <span className="font-semibold">Category</span>
+                <span>{item.category}</span>
+              </div>
 
-        <span>{item.category}</span>
+              <div className="flex justify-between">
+                <span className="font-semibold">Expense</span>
+                <span>{item.expenses}</span>
+              </div>
 
-        <span>{item.expenses}</span>
+              <div className="flex justify-between gap-4">
+                <span className="font-semibold">Working Site</span>
+                <span className="text-right">{item.site}</span>
+              </div>
 
-        <span>{item.site}</span>
+              <div className="flex justify-between">
+                <span className="font-semibold">Payment</span>
+                <span>{item.paymentmethod}</span>
+              </div>
 
-        <span>{item.paymentmethod}</span>
+              <div className="flex justify-between">
+                <span className="font-semibold">Paid By</span>
+                <span>{item.paidby}</span>
+              </div>
+            </div>
 
-        <span>{item.paidby}</span>
-
-      
-
+            {/* Desktop */}
+            <div className="hidden lg:contents">
+              <span>{item.serial}</span>
+              <span>{item.category}</span>
+              <span>{item.expenses}</span>
+              <span>{item.site}</span>
+              <span>{item.paymentmethod}</span>
+              <span>{item.paidby}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-  ))}
-</div>
   );
 };
 
-export default ExpensesDetails
+export default ExpensesDetails;

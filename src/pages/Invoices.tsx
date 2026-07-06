@@ -113,39 +113,39 @@ const Invoices = () => {
 
         <div className="flex justify-between">
           <span className="font-semibold">Serial</span>
-          <span>0{item.serial}.</span>
+          <span className="ml-3">0{item.serial}.</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Client</span>
-          <span>{item.Client}</span>
+          <span className="ml-3">{item.Client}</span>
         </div>
         <div className="flex justify-between">
           <span className="font-semibold">Site</span>
-          <span className="text-right">{item.site}</span>
+          <span className="text-right ml-3">{item.site}</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Expense</span>
-          <span>${item.totalexpenses.toFixed(2)}</span>
+          <span className="ml-3">${item.totalexpenses.toFixed(2)}</span>
         </div>
 
 
         <div className="flex justify-between">
           <span className="font-semibold">Payment</span>
-          <span>{item.invoiceAmount}</span>
+          <span className="ml-3">{item.invoiceAmount}</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Gross profit</span>
-          <span>{item.grossProfit}</span>
+          <span className="ml-3">{item.grossProfit}</span>
         </div>
 
         <div className="flex justify-between items-center">
           <span className="font-semibold">Status</span>
 
           <span
-            className={`px-4 py-1 rounded-full text-sm text-white ${
+            className={`px-4 py-1 rounded-full text-sm ml-3 text-white ${
               item.status === "paid"
                 ? "bg-emerald-600"
                 : item.status === "pending"
@@ -157,8 +157,9 @@ const Invoices = () => {
           </span>
         </div>
 
-        <div className="flex justify-end">
-          <LiaEllipsisVSolid className="text-xl cursor-pointer" />
+        <div className="flex justify-between">
+          <span className="font-semibold">Options</span>
+          <LiaEllipsisVSolid className="text-xl ml-3 cursor-pointer" />
         </div>
       </div>
 

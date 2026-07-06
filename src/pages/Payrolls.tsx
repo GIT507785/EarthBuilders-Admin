@@ -121,29 +121,29 @@ const Payrolls = () => {
       {/* Mobile */}
       <div className="lg:hidden space-y-3">
 
-        <div className="flex justify-between">
+        <div className="flex justify-between ml-3">
           <span className="font-semibold">Serial</span>
-          <span>0{item.serial}.</span>
+          <span className="ml-3">0{item.serial}.</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Employee Name</span>
-          <span>{item.employeName}</span>
+          <span className="ml-3">{item.employeName}</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Pay Period</span>
-          <span>{item.PayPeriod}</span>
+          <span className="ml-3">{item.PayPeriod}</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Expenses</span>
-          <span className="text-right">${item.Epenses.toFixed(2)}</span>
+          <span className="text-right ml-3">${item.Epenses.toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between">
           <span className="font-semibold">Hours Worked</span>
-          <span>{item.huorsWorked}</span>
+          <span className="ml-3">{item.huorsWorked}</span>
         </div>
 
         
@@ -152,7 +152,7 @@ const Payrolls = () => {
           <span className="font-semibold">Status</span>
 
           <span
-            className={`px-4 py-1 rounded-full text-sm text-white ${
+            className={`px-4 py-1 rounded-full ml-3 text-sm text-white ${
               item.status === "paid"
                 ? "bg-emerald-600"
                 : item.status === "pending"
@@ -164,7 +164,8 @@ const Payrolls = () => {
           </span>
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex justify-between">
+          <span className="font-semibold">Options</span>
           <LiaEllipsisVSolid className="text-xl cursor-pointer" />
         </div>
       </div>

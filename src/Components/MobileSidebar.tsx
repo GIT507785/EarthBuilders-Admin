@@ -92,7 +92,7 @@ const MobileSidebar = ({
       <aside
         className={`
           fixed top-0 left-0 z-50
-          h-100vh  w-52 bg-white
+          h-130vh  w-52 bg-white
           shadow-xl border-r
           flex flex-col
           transition-transform duration-300

@@ -128,7 +128,7 @@ const BalanceSheet = () => {
        <div className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <h1 className="font-medium text-xl">Balance Sheet Report</h1>
-          <button onClick={runReport} className="flex  gap-3 cursor-pointer hover:bg-emerald-600 transition-all bg-emerald-800 text-white px-4 py-2 rounded-full " 
+          <button onClick={runReport} className="flex  w-40 items-center justify-center gap-3 cursor-pointer hover:bg-emerald-600 transition-all bg-emerald-800 text-white px-4 py-2 rounded-full " 
           >Run Report</button>
         </div>
          <div className="mt-8 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
