@@ -12,10 +12,9 @@ import UserExpensesCard from "./UserExpensesCard";
     image:string
  }
 
-  interface hoursData{
-    days:number;
-    hours:number
-  }
+  
+
+  
 
 const UserDetails = () => {
 
@@ -78,12 +77,12 @@ const UserDetails = () => {
    console.log(filter)
    console.log(current)
 
-   const hoursData = {
-    hours:{
-        days:10,
-        worked:40 
-    },
-   }
+  //  const hoursData = {
+  //   hours:{
+  //       days:10,
+  //       worked:40 
+  //   },
+  //  }
    
 
 

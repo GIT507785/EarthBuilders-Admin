@@ -39,30 +39,30 @@ const ReportToolbar = () => {
     const [sortData , setSortData] = useState(reportData)
        useEffect(()=>{
     
-    let data = [...reportData]
+    // let data = [...reportData]
     
     switch (sortBy) {
         case "A-Z":
-            data.sort((a,b)=> a.accountName.localeCompare(b.accountName));
+            sortData.sort((a,b)=> a.accountName.localeCompare(b.accountName));
             break;
             
             case "Z-A":
-                data.sort((a,b)=> b.accountName.localeCompare(a.accountName));
+                sortData.sort((a,b)=> b.accountName.localeCompare(a.accountName));
                 break;
                 
                 case "Low -> High":
-                    data.sort((a,b)=> a.amount - b.amount);
+                    sortData.sort((a,b)=> a.amount - b.amount);
                     break;
                     
                     case "High -> Low":
-                        data.sort((a,b)=> b.amount - a.amount);
+                        sortData.sort((a,b)=> b.amount - a.amount);
                         break; 
 
                         default:
                             break;
                         }
                         
-                        setSortData(data)
+                        setSortData(sortData)
                     },[sortBy])
 
          const handlePrint =()=>{

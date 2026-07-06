@@ -1,5 +1,4 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft } from "lucide-react";
 import { LiaEllipsisVSolid } from "react-icons/lia";
 import {Link} from 'react-router-dom'
 

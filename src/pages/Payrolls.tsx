@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { LiaEllipsisVSolid } from "react-icons/lia";
-import PayCard from "../Components/PayCard";
 import { FilterIcon } from "lucide-react";
 import EmployeePayRolls from "./ChildPages/EmployeePayRolls";
 import { Link } from "react-router-dom";

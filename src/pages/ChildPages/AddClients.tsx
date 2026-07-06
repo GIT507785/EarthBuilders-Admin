@@ -1,4 +1,4 @@
-import { HandshakeIcon, UploadCloud, User2Icon } from "lucide-react"
+import { HandshakeIcon} from "lucide-react"
 import React, { useState } from "react"
 
  interface inputData {

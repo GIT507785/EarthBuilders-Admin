@@ -1,15 +1,15 @@
 import { Plus, Quote } from "lucide-react";
 import React, { useState } from "react"
 
- interface form {
-    clientName:string;
-    postalCode:number;
-    totalPrice:number;
-   siteAddress:string;
-   country:string;
-   city:string
-   projectName:string
-}
+//  interface form {
+//     clientName:string;
+//     postalCode:number;
+//     totalPrice:number;
+//    siteAddress:string;
+//    country:string;
+//    city:string
+//    projectName:string
+// }
 
 const CreateQuote = () => {
 

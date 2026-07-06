@@ -5,7 +5,7 @@ import { ChevronDown, ChevronUp, FilterIcon } from "lucide-react";
 
 const Invoices = () => {
   const [status] = useState("received");
-  const[read , setRead] = useState<boolean>(false)
+  const[read , setRead] = useState<boolean>(true)
   
   const  invoiceAmount = 50
 
@@ -215,7 +215,7 @@ const Invoices = () => {
 
             ):(
                 
-              <button onClick={()=>setRead(true)}  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mark as read</button>
+              <button onClick={()=>setRead(!read)}  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mark as read</button>
             )}
            </div>
         </div>
