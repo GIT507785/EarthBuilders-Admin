@@ -177,9 +177,9 @@ const ReportToolbar = () => {
            <h1 className="font-medium mt-3 " >As of {new Date().toLocaleDateString()}</h1>
          </div>
 
-         <div className="fixed right-8 ">
+         {/* <div className="fixed right-8 ">
         <h1 className="font-bold text-xl">TOTAL</h1>
-         </div>
+         </div> */}
 
            <div className="border border-t p-5 border-gray-300 mt-12 h-screen overflow-y-auto no-scrollbar">
             {balanceData.map( node=>

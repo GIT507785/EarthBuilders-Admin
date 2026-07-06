@@ -111,10 +111,11 @@ const Clients = () => {
                   </span>
                 </div>
 
-                <div className="flex justify-end">
+                <div className="flex justify-between gap-4">
                   <div className="group relative">
+                  <span className="font-semibold">Options</span>
                     <LiaEllipsisVSolid className="cursor-pointer text-xl" />
-
+                   
                     <div className="absolute right-0 top-7 hidden w-36 rounded-lg border border-gray-200 bg-white py-2 shadow-lg group-hover:block">
                       <button className="block w-full px-4 py-2 text-left hover:bg-gray-100">
                         Edit Client

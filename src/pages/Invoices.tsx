@@ -77,8 +77,8 @@ const Invoices = () => {
         <h1 className="text-xl font-medium mt-3 text-gray-700">Invoices</h1>
       </div>
       <div className="flex gap-3 bg-emerald-900 text-white px-4 py-2 rounded-full justify-center items-center">
-         <FilterIcon/>
-         <button>
+         <FilterIcon size={16}/>
+         <button className="text-xs sm:text-sm">
           Filter
          </button>
       </div>
@@ -111,21 +111,21 @@ const Invoices = () => {
       {/* Mobile */}
       <div className="lg:hidden space-y-3">
 
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-4">
           <span className="font-semibold">Serial</span>
           <span className="ml-3">0{item.serial}.</span>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-2">
           <span className="font-semibold">Client</span>
           <span className="ml-3">{item.Client}</span>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-1">
           <span className="font-semibold">Site</span>
           <span className="text-right ml-3">{item.site}</span>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-3">
           <span className="font-semibold">Expense</span>
           <span className="ml-3">${item.totalexpenses.toFixed(2)}</span>
         </div>
@@ -141,11 +141,11 @@ const Invoices = () => {
           <span className="ml-3">{item.grossProfit}</span>
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-2">
           <span className="font-semibold">Status</span>
 
           <span
-            className={`px-4 py-1 rounded-full text-sm ml-3 text-white ${
+            className={`px-4 py-1 rounded-full text-xs sm:text-sm ml-3 text-white ${
               item.status === "paid"
                 ? "bg-emerald-600"
                 : item.status === "pending"

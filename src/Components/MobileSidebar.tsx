@@ -91,8 +91,8 @@ const MobileSidebar = ({
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-0 left-0 z-50
-          h-130vh  w-52 bg-white
+          fixed top-0 overflow-y-auto no-scrollbar left-0 z-50
+          min-h-screen  w-52 bg-white
           shadow-xl border-r
           flex flex-col
           transition-transform duration-300
